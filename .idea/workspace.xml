@@ -32,10 +32,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Q57xZBjHjBFwKvb6NrkRHcDsc1" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="G:/zwh/1.FaceRecognition/1.Insightface/insightface-master" />
+    <property name="last_opened_file_path" value="E:/1.PaidOn/3.FaceFusion/2.stylegan/stylegan-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,17 +52,17 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\zwh\1.FaceRecognition\1.insightface-master\models\my\model-y1-test2" />
+      <recent name="Z:\zwh\1.FaceRecognition\1.insightface-master\models" />
+      <recent name="Z:\zwh\1.FaceRecognition\1.insightface-master\recognition\models\y1-arcface-emore" />
+      <recent name="E:\1.PaidOn\1.FaceRecognition\1.Insightface\insightface-master\models\my\model-y1-test2" />
+      <recent name="E:\1.PaidOn\1.FaceRecognition\1.Insightface\insightface-master\models\model-y1-test2" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="Z:\zwh\1.FaceRecognition\1.insightface-master\recognition" />
       <recent name="D:\03.work\02.development\04.PaidOn\1.FaceRecognition\1.Insightface\insightface-master\recognition" />
       <recent name="D:\03.work\02.development\04.PaidOn\1.FaceRecognition\1.Insightface\insightface-master\script" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="Z:\zwh\1.FaceRecognition\1.insightface-master\recognition\models\y1-arcface-emore" />
-      <recent name="E:\1.PaidOn\1.FaceRecognition\1.Insightface\insightface-master\models\my\model-y1-test2" />
-      <recent name="E:\1.PaidOn\1.FaceRecognition\1.Insightface\insightface-master\models\model-y1-test2" />
-      <recent name="E:\1.PaidOn\1.FaceRecognition\1.Insightface\insightface-master\script" />
-      <recent name="D:\03.work\02.development\04.PaidOn\1.FaceRecognition\1.Insightface\insightface-master\src\align" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -73,7 +77,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.generate_pairs_txt">
+  <component name="RunManager" selected="Python.train">
     <configuration name="data_preproce" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="insightface-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -194,9 +198,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.train" />
         <item itemvalue="Python.generate_pairs_txt" />
         <item itemvalue="Python.data_preproce" />
-        <item itemvalue="Python.train" />
         <item itemvalue="Python.verification" />
         <item itemvalue="Python.mydata2pack" />
       </list>
@@ -253,11 +257,31 @@
       <workItem from="1568260379467" duration="1999000" />
       <workItem from="1568269523861" duration="7551000" />
       <workItem from="1568285910958" duration="3050000" />
+      <workItem from="1568436596196" duration="10076000" />
+      <workItem from="1568687113244" duration="26416000" />
+      <workItem from="1568800225598" duration="11354000" />
+      <workItem from="1568820281343" duration="13771000" />
+      <workItem from="1568862381340" duration="2590000" />
+      <workItem from="1568877110470" duration="599000" />
+      <workItem from="1568950041521" duration="8299000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/insightface_master$make_embs.coverage" NAME="make_embs Coverage Results" MODIFIED="1566651358363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
@@ -275,7 +299,7 @@
     <SUITE FILE_PATH="coverage/insightface_master$id_classer.coverage" NAME="id_classer Coverage Results" MODIFIED="1566820434983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
     <SUITE FILE_PATH="coverage/insightface_master$lfw2pack.coverage" NAME="lfw2pack Coverage Results" MODIFIED="1567644841461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/data" />
     <SUITE FILE_PATH="coverage/insightface_master$sample_config.coverage" NAME="sample_config Coverage Results" MODIFIED="1565777115677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recognition" />
-    <SUITE FILE_PATH="coverage/1_insightface_master$train.coverage" NAME="train Coverage Results" MODIFIED="1568273415014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recognition" />
+    <SUITE FILE_PATH="coverage/1_insightface_master$train.coverage" NAME="train Coverage Results" MODIFIED="1568770478653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recognition" />
     <SUITE FILE_PATH="coverage/1_insightface_master$data_preproce.coverage" NAME="data_preproce Coverage Results" MODIFIED="1568292337069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
     <SUITE FILE_PATH="coverage/insightface_master$build_eval_pack.coverage" NAME="build_eval_pack Coverage Results" MODIFIED="1565951402140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recognition/data" />
     <SUITE FILE_PATH="coverage/insightface_master$generate_pairs_txt.coverage" NAME="generate_pairs_txt Coverage Results" MODIFIED="1568098374511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />

@@ -397,7 +397,7 @@ def parse_args():
 
     parser.add_argument('--indir', default='F:/3.image_classer_new' ,help='path to folder containing images.')
 
-    # 人脸分类之后输出的文件夹，注意，该问价夹中，必须存在一个ID，也就是说，至少存在一个子文件夹，并且该子文件夹中最少包含一张照片
+    # 把要删除的图片拷贝到改目录，可以人为进行确认，是否有必要删除
     parser.add_argument('--outdir', default='F:/4.image_clean' ,help='path to folder containing images.')
 
     # 预训练模型的路径

@@ -720,7 +720,7 @@ if __name__ == '__main__':
     # 可以加载多个model，以|隔开，如'../../models/model-y1-test2/model,0|1|2'
     #parser.add_argument('--model',default='../../models/model-y1-test2/model,0',help='path to load model.')
 
-    parser.add_argument('--model',default='../models/y1-arcface-emore/model,7',help='path to load model.')
+    parser.add_argument('--model',default='../models/y1-arcface-emore_lrle-5/model,7',help='path to load model.')
 
     #parser.add_argument('--target', default='CASIA-FaceV5,lfw,cfp_ff,cfp_fp,agedb_30', help='test targets.')
     parser.add_argument('--target', default='shunde', help='test targets.')

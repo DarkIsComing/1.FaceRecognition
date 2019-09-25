@@ -149,7 +149,7 @@ def main(args):
             #print(src_img_path_list)
             if len(src_img_path_list) <= 1:
                 target_dir = args.outdir
-            elif len(src_img_path_list) >2:
+            elif len(src_img_path_list) ==2:
                 src_img_path_prefix = src_img_path_list[:-1]
                 target_dir = os.path.join(args.outdir, str(src_img_path_prefix[0]))
             else:

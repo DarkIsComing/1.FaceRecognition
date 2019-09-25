@@ -1,0 +1,10 @@
+insightface-master\script   该目录是我修改的所有文件，都包含在内
+	data_preproce.py  对文件夹进行序列化，还有分割训练测试集
+	dataset_clean.py  通过聚类，对数据进行清洗
+	delete_same_face.py  通过聚类，把大量一样的图片全部删除
+	faces_classer.py  对人脸进行分类
+	file_move.py  当初的移除文件，无关要紧
+	generate_pairs_txt.py 生成测试数据bin之前，需要生成pairs.txt
+	mydata2pack.py 生成测试.bin文件
+	im2rec.py 生成训练rec文件
+	test 就是前面的data_preproce

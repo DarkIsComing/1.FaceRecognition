@@ -274,9 +274,9 @@ def parse_args():
         make a record database by reading from an image list')
 
 
-    parser.add_argument('--prefix', default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/5.dataset_divi/pack2/train/train', help='prefix of input/output lst and rec files.')
+    parser.add_argument('--prefix', default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/5.dataset_divi/pack3/train/train', help='prefix of input/output lst and rec files.')
 
-    parser.add_argument('--root', default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/5.dataset_divi/pack2/train/' ,help='path to folder containing images.')
+    parser.add_argument('--root', default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/5.dataset_divi/pack3/train/' ,help='path to folder containing images.')
 
     cgroup = parser.add_argument_group('Options for creating image lists')
 

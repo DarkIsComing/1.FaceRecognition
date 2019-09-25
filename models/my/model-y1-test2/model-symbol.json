@@ -4218,6 +4218,166 @@
         "momentum": "0.9"
       }, 
       "inputs": [[426, 0, 0], [427, 0, 0], [428, 0, 0], [429, 0, 1], [430, 0, 1]]
+    }, 
+    {
+      "op": "BlockGrad", 
+      "name": "blockgrad0", 
+      "inputs": [[431, 0, 0]]
+    }, 
+    {
+      "op": "L2Normalization", 
+      "name": "fc1n", 
+      "attrs": {"mode": "instance"}, 
+      "inputs": [[431, 0, 0]]
+    }, 
+    {
+      "op": "_mul_scalar", 
+      "name": "_mulscalar1", 
+      "attrs": {"scalar": "64.0"}, 
+      "inputs": [[433, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "fc7_weight", 
+      "attrs": {
+        "__init__": "[\"normal\", {\"sigma\": 0.01}]", 
+        "__lr_mult__": "1.0", 
+        "__shape__": "(623, 128)", 
+        "__wd_mult__": "1.0"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "L2Normalization", 
+      "name": "l2normalization0", 
+      "attrs": {"mode": "instance"}, 
+      "inputs": [[435, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "fc7", 
+      "attrs": {
+        "no_bias": "True", 
+        "num_hidden": "623"
+      }, 
+      "inputs": [[434, 0, 0], [436, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "softmax_label", 
+      "inputs": []
+    }, 
+    {
+      "op": "one_hot", 
+      "name": "one_hot0", 
+      "attrs": {
+        "depth": "623", 
+        "off_value": "0.0", 
+        "on_value": "1.0"
+      }, 
+      "inputs": [[438, 0, 0]]
+    }, 
+    {
+      "op": "pick", 
+      "name": "pick0", 
+      "attrs": {"axis": "1"}, 
+      "inputs": [[437, 0, 0], [438, 0, 0]]
+    }, 
+    {
+      "op": "_div_scalar", 
+      "name": "_divscalar0", 
+      "attrs": {"scalar": "64.0"}, 
+      "inputs": [[440, 0, 0]]
+    }, 
+    {
+      "op": "arccos", 
+      "name": "arccos0", 
+      "inputs": [[441, 0, 0]]
+    }, 
+    {
+      "op": "_plus_scalar", 
+      "name": "_plusscalar0", 
+      "attrs": {"scalar": "0.5"}, 
+      "inputs": [[442, 0, 0]]
+    }, 
+    {
+      "op": "cos", 
+      "name": "cos0", 
+      "inputs": [[443, 0, 0]]
+    }, 
+    {
+      "op": "_mul_scalar", 
+      "name": "_mulscalar2", 
+      "attrs": {"scalar": "64.0"}, 
+      "inputs": [[444, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_sub", 
+      "name": "_minus0", 
+      "inputs": [[445, 0, 0], [440, 0, 0]]
+    }, 
+    {
+      "op": "expand_dims", 
+      "name": "expand_dims0", 
+      "attrs": {"axis": "1"}, 
+      "inputs": [[446, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_mul", 
+      "name": "broadcast_mul0", 
+      "inputs": [[439, 0, 0], [447, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus12", 
+      "inputs": [[437, 0, 0], [448, 0, 0]]
+    }, 
+    {
+      "op": "SoftmaxOutput", 
+      "name": "softmax", 
+      "attrs": {"normalization": "valid"}, 
+      "inputs": [[449, 0, 0], [438, 0, 0]]
+    }, 
+    {
+      "op": "SoftmaxActivation", 
+      "name": "softmaxactivation0", 
+      "inputs": [[449, 0, 0]]
+    }, 
+    {
+      "op": "log", 
+      "name": "log0", 
+      "inputs": [[451, 0, 0]]
+    }, 
+    {
+      "op": "one_hot", 
+      "name": "one_hot1", 
+      "attrs": {
+        "depth": "623", 
+        "off_value": "0.0", 
+        "on_value": "-1.0"
+      }, 
+      "inputs": [[438, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_mul", 
+      "name": "_mul0", 
+      "inputs": [[452, 0, 0], [453, 0, 0]]
+    }, 
+    {
+      "op": "sum", 
+      "name": "sum0", 
+      "inputs": [[454, 0, 0]]
+    }, 
+    {
+      "op": "_div_scalar", 
+      "name": "_divscalar1", 
+      "attrs": {"scalar": "240"}, 
+      "inputs": [[455, 0, 0]]
+    }, 
+    {
+      "op": "BlockGrad", 
+      "name": "blockgrad1", 
+      "inputs": [[456, 0, 0]]
     }
   ], 
   "arg_nodes": [
@@ -4505,7 +4665,9 @@
     427, 
     428, 
     429, 
-    430
+    430, 
+    435, 
+    438
   ], 
   "node_row_ptr": [
     0, 
@@ -4940,8 +5102,34 @@
     527, 
     528, 
     529, 
-    532
+    532, 
+    533, 
+    535, 
+    536, 
+    537, 
+    539, 
+    540, 
+    541, 
+    542, 
+    543, 
+    544, 
+    545, 
+    546, 
+    547, 
+    548, 
+    549, 
+    550, 
+    551, 
+    552, 
+    553, 
+    554, 
+    555, 
+    556, 
+    557, 
+    558, 
+    559, 
+    560
   ], 
-  "heads": [[431, 0, 0]], 
+  "heads": [[432, 0, 0], [450, 0, 0], [457, 0, 0]], 
   "attrs": {"mxnet_version": ["int", 10500]}
 }

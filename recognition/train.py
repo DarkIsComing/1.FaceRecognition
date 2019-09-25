@@ -11,11 +11,13 @@ import sklearn
 import pickle
 import numpy as np
 import mxnet as mx
+import mxnet.autograd as ag
 from mxnet import ndarray as nd
 import argparse
 import mxnet.optimizer as optimizer
 from config import config, default, generate_config
 from metric import *
+
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'common'))
 import flops_counter
@@ -133,9 +135,11 @@ def get_symbol(args):
         # 先进行L2正则化，然后进行全链接
         _weight = mx.symbol.L2Normalization(_weight, mode='instance')
         nembedding = mx.symbol.L2Normalization(embedding, mode='instance', name='fc1n') * s
+
+        #with ag.pause(train_mode=True):
         #使用全局池化代替全链接层，得到每个id的角度*64
         fc7 = mx.sym.FullyConnected(data=nembedding, weight=_weight, no_bias=True, num_hidden=config.num_classes,
-                                    name='fc7')
+                                        name='fc7')
 
 
         in_shape,out_shape,uax_shape = fc7.infer_shape(data = (2,3,112,112))
@@ -333,7 +337,7 @@ def train_net(args):
 
     # 主要获取数据的迭代器，triplet与sfotmax输入数据的迭代器是不一样的，具体哪里不一样，后续章节为大家分析
     if config.loss_name.find('triplet') >= 0:
-        from recognition.triplet_image_iter import FaceImageIter
+        from triplet_image_iter import FaceImageIter
         triplet_params = [config.triplet_bag_size, config.triplet_alpha, config.triplet_max_ap]
         train_dataiter = FaceImageIter(
             batch_size=args.batch_size,
@@ -351,7 +355,7 @@ def train_net(args):
         _metric = LossValueMetric()
         eval_metrics = [mx.metric.create(_metric)]
     else:
-        from recognition.image_iter import FaceImageIter
+        from image_iter import FaceImageIter
         train_dataiter = FaceImageIter(
             batch_size=args.batch_size,
             data_shape=data_shape,
@@ -377,7 +381,7 @@ def train_net(args):
     # initializer = mx.init.Xavier(rnd_type='gaussian', factor_type="out", magnitude=2) #resnet style
     _rescale = 1.0 / args.ctx_num
     #opt = optimizer.SGD(learning_rate=args.lr, momentum=args.mom, wd=args.wd, rescale_grad=_rescale)
-    opt = optimizer.Adam(learning_rate=1e-5, wd=args.wd, rescale_grad=_rescale)
+    opt = optimizer.Adam(learning_rate=args.lr, wd=args.wd, rescale_grad=_rescale)
     _cb = mx.callback.Speedometer(args.batch_size, args.frequent)
 
     # 加载所有测试数据集

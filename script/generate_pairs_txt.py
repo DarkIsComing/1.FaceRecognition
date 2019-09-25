@@ -9,8 +9,8 @@ import re
 '''
 import random
 # 图片数据文件夹
-INPUT_DATA = '/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/5.dataset_divi/pack2/test'
-pairs_file_path = '/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/5.dataset_divi/pack2/test/pairs.txt'
+INPUT_DATA = '/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/5.dataset_divi/pack3/test'
+pairs_file_path = '/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/5.dataset_divi/pack3/test/pairs.txt'
 
 rootdir_list = os.listdir(INPUT_DATA)
 idsdir_list = [name for name in rootdir_list if os.path.isdir(os.path.join(INPUT_DATA, name))]

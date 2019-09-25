@@ -503,23 +503,24 @@ def parse_args():
         make a record database by reading from an image list')
 
     # 想要生成.lst的目录,再人脸为空的情况下，必须提前为输入以及输出文件夹生成一个.lst文件
-    parser.add_argument('--root', default='F:/3.1no_recognition' ,help='path to folder containing images.')
+    #parser.add_argument('--root', default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/3.1.no_recognition' ,help='path to folder containing images.')
+    parser.add_argument('--root',default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/3.2image_classer',help='path to folder containing images.')
 
     # 需要进行人脸分类的文件夹
-    parser.add_argument('--indir', default='F:/3.1no_recognition' ,help='path to folder containing images.')
+    parser.add_argument('--indir', default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/3.1.no_recognition' ,help='path to folder containing images.')
 
-    # 人脸分类之后输出的文件夹，注意，该问价夹中，必须存在一个ID，也就是说，至少存在一个子文件夹，并且该子文件夹中最少包含一张照片
-    parser.add_argument('--outdir', default='F:/3.2image_classer' ,help='path to folder containing images.')
+    # 把相同的图片复制到该文件夹，让本人确定是否需要删除该类文件，如果需要删除，把下面的delete参数设置为true即可
+    parser.add_argument('--outdir', default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/3.2image_classer' ,help='path to folder containing images.')
 
     # 预训练模型的路径
-    parser.add_argument('--model', default='../models/my/model-y1-test2/model,13', help='path to load model.')
+    parser.add_argument('--model', default='../models/model-y1-test2/model,0', help='path to load model.')
     #parser.add_argument('--model', default='../models/model-y1-test2/model,0', help='path to load model.')
 
     # 判定是否为同一人的相似度阈值
     parser.add_argument('--max_threshold', default=0.75, type=float, help='')
 
     # 低于该阈值，确定为一个新的人脸
-    parser.add_argument('--min_threshol', default=0.665, type=float, help='')
+    parser.add_argument('--min_threshol', default=0.66, type=float, help='')
 
     cgroup = parser.add_argument_group('Options for creating image lists')
 

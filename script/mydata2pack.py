@@ -9,9 +9,9 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'eval'))
 
 parser = argparse.ArgumentParser(description='Package LFW images')
 # general
-parser.add_argument('--data-dir', default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/5.dataset_divi/pack2/test', help='')
+parser.add_argument('--data-dir', default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/5.dataset_divi/pack3/test', help='')
 parser.add_argument('--image-size', type=str, default='112,112', help='')
-parser.add_argument('--output', default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/5.dataset_divi/pack2/test/shunde.bin', help='path to save.')
+parser.add_argument('--output', default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/5.dataset_divi/pack3/test/shunde.bin', help='path to save.')
 args = parser.parse_args()
 lfw_dir = args.data_dir
 image_size = [int(x) for x in args.image_size.split(',')]

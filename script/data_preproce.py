@@ -135,8 +135,8 @@ def parse_args():
                         help='specify the encoding of the images.')
 
     # 需要规则化，或者需要进行数据集分割的根目录s
-    parser.add_argument('--root',default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/5.dataset_divi/pack2/test',help='')
-    #parser.add_argument('--root',default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/3.2image_classer',help='')
+    #parser.add_argument('--root',default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/5.dataset_divi/pack3/train',help='')
+    parser.add_argument('--root',default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/3.2image_classer',help='')
 
     rule = parser.add_argument_group('把目录下的文件按照一定规则命名，相关的参数')
 
@@ -151,7 +151,7 @@ def parse_args():
     divi = parser.add_argument_group('划分数据训练集，测试集，以及验证测试集')
 
     # 数据划分之后输出的目录
-    divi.add_argument('--outdir',default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/5.dataset_divi/pack2',help='')
+    divi.add_argument('--outdir',default='/data/zwh/1.FaceRecognition/2.Dataset/2.PaidOnData/2.DataDivi/1.Shunde/5.dataset_divi/pack3',help='')
 
     # 训练集所占用的比例
     divi.add_argument('--train-ratio', type=float, default=0.8,
